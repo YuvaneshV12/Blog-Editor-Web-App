@@ -24,7 +24,7 @@ It allows users to view, edit, and manage blog posts, including drafts and publi
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/Govarthan30/blogs.git
+   git clone [https://github.com/Govarthan30/blogs.git](https://github.com/YuvaneshV12/Blog-Editor-Web-App.git)
    cd blogs/client
    ```
 
