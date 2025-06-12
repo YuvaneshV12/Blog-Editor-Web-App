@@ -17,7 +17,7 @@ const BlogList: React.FC<BlogListProps> = ({ onEdit }) => {
     let isMounted = true;
     (async () => {
       try {
-        const res = await axios.get<Blog[]>('https://blogs-6tlu.onrender.com/api/blogs');
+        const res = await axios.get<Blog[]>('https://blog-editor-backend-ai6s.onrender.com/api/blogs');
         if (isMounted) setBlogs(res.data);
       } catch (err) {
         if (isMounted) console.error('Error fetching blogs:', err);
@@ -56,7 +56,7 @@ const BlogList: React.FC<BlogListProps> = ({ onEdit }) => {
   const handleDelete = async (blogId: string) => {
     if (!window.confirm('Are you sure you want to delete this blog?')) return;
     try {
-      await axios.delete(`https://blogs-6tlu.onrender.com/api/blogs/${blogId}`);
+      await axios.delete(`https://blog-editor-backend-ai6s.onrender.com/api/blogs/${blogId}`);
       setBlogs((prev) => prev.filter((b) => b._id !== blogId));
       if (selectedBlogId === blogId) setSelectedBlogId(null);
       if (viewBlog && viewBlog._id === blogId) closeModal();
